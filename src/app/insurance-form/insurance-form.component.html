@@ -1,0 +1,35 @@
+<div class="insurance-container">
+  <div class="insurance-card">
+    <img class="chester-logo" src="../../assets/chester_logo.png" alt="" />
+    <h2 class="title">Chester Insurance Form</h2>
+
+    <div>
+      <label for="vehicleType">Select Vehicle Type:</label>
+      <select id="vehicleType" [(ngModel)]="selectedVehicleType">
+        <option *ngFor="let type of vehicleTypes" [value]="type">
+          {{ type }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label>
+        <input type="checkbox" [(ngModel)]="isUnder25" />Select if under
+        25-years
+      </label>
+    </div>
+
+    <div>
+      <label for="penaltyPoints">Penalty Points:</label>
+      <input type="number" id="penaltyPoints" [(ngModel)]="penaltyPoints" />
+    </div>
+
+    <button
+      [class]="isModalOpen ? 'disable' : 'submit'"
+      (click)="calculatePremium()"
+      [disabled]="isModalOpen"
+    >
+      Calculate Premium
+    </button>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-dialog-container {
+  transform: translate(-50%, -1130%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+}
+
+.close-btn{
+  background-color: rgb(251, 85, 85);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: red;
+    }
+
+}
+
+.centre-text{
+  text-align: center;
+  color: blue;
+}
+

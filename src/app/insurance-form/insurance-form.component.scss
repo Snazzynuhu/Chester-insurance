@@ -1,0 +1,71 @@
+.insurance-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.insurance-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+
+  .chester-logo{
+    max-width: 15%;
+    margin: auto;
+  }
+
+  h2 {
+    color: #333;
+    color: red;
+  }
+
+  div {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+  }
+  .submit {
+    background-color: #2196F3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0b7dda;
+    }
+  }
+  .disable{
+    background-color: lightgray;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+}
