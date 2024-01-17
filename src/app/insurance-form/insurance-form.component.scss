@@ -70,3 +70,81 @@
     transition: background-color 0.3s ease;
   }
 }
+
+// START
+
+.align{
+  padding-top:20px;
+  width:100%;
+  height:580px;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-around;
+  align-items:space-around;
+}
+.card-container{
+  -webkit-perspective:1200;
+  -moz-perspective:1200;
+  perspective:1200;
+}
+.card-vertical{
+  width: 22.5rem;
+  max-width: 400px;
+  box-shadow: 0 6px 8px #bbb;
+  -moz-transform-style:preserve-3d;
+  -webkit-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+  transition:all .4s ease;
+ }
+.card-front{
+  color:#fafafa;
+  height:100%;
+  width:100%;
+  border-radius: 8px;
+  position:absolute;
+  background:#ff5252;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+ }
+.card-back{
+  height:100%;
+  width:100%;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+  -moz-transform:rotateY(179.9deg);
+  -webkit-transform:rotateY(179.9deg);
+  transform:rotateY(179.9deg);
+ }
+.card-front-content{
+  padding:2em;
+  box-sizing:border-box;
+  text-align:center;
+  line-height:2.6em;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+  &>img{
+    height: 5rem;
+    margin-bottom: 1rem;
+  }
+
+}
+
+.card-back-hr{
+  -webkit-transform:rotateX(179.9deg);
+  -moz-transform:rotateX(179.9deg);
+  transform:rotateX(179.9deg);
+}
+.card-vertical:hover{
+  -webkit-transform:rotateY(179.9deg);
+  -moz-transform:rotateY(179.9deg);
+  transform:rotateY(179.9deg);
+}
+

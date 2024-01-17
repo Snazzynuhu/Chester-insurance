@@ -1,35 +1,53 @@
+
 <div class="insurance-container">
-  <div class="insurance-card">
-    <img class="chester-logo" src="../../assets/chester_logo.png" alt="" />
-    <h2 class="title">Chester Insurance Form</h2>
 
-    <div>
-      <label for="vehicleType">Select Vehicle Type:</label>
-      <select id="vehicleType" [(ngModel)]="selectedVehicleType">
-        <option *ngFor="let type of vehicleTypes" [value]="type">
-          {{ type }}
-        </option>
-      </select>
+<!-- START -->
+  <div class="card-container">
+    <div class="card-vertical">
+      <div class="card-front">
+        <article class="card-front-content">
+          <img src="../../assets//chester_logo - Copy.png" alt="">
+        <h1>Welcome to University of Chester Insurance App</h1>
+        <p>Hover On Card To Display Form</p>
+        </article>
+      </div>
+      <div class="card-back">
+        <div class="insurance-card">
+          <img class="chester-logo" src="../../assets/chester_logo.png" alt="" />
+          <h2 class="title">Chester Insurance Form</h2>
+
+          <div>
+            <label for="vehicleType">Select Vehicle Type:</label>
+            <select id="vehicleType" [(ngModel)]="selectedVehicleType">
+              <option *ngFor="let type of vehicleTypes" [value]="type">
+                {{ type }}
+              </option>
+            </select>
+          </div>
+
+          <div>
+            <label>
+              <input type="checkbox" [(ngModel)]="isUnder25" />Select if under
+              25-years
+            </label>
+          </div>
+
+          <div>
+            <label for="penaltyPoints">Penalty Points:</label>
+            <input type="number" id="penaltyPoints" [(ngModel)]="penaltyPoints" />
+          </div>
+
+          <button
+            [class]="isModalOpen ? 'disable' : 'submit'"
+            (click)="calculatePremium()"
+            [disabled]="isModalOpen"
+          >
+            Calculate Premium
+          </button>
+        </div>
+      </div>
     </div>
-
-    <div>
-      <label>
-        <input type="checkbox" [(ngModel)]="isUnder25" />Select if under
-        25-years
-      </label>
-    </div>
-
-    <div>
-      <label for="penaltyPoints">Penalty Points:</label>
-      <input type="number" id="penaltyPoints" [(ngModel)]="penaltyPoints" />
-    </div>
-
-    <button
-      [class]="isModalOpen ? 'disable' : 'submit'"
-      (click)="calculatePremium()"
-      [disabled]="isModalOpen"
-    >
-      Calculate Premium
-    </button>
   </div>
+  <!-- T|END -->
+
 </div>
