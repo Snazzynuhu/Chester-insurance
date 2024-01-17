@@ -42,9 +42,7 @@ export class InsuranceFormComponent {
     }
 
     const dialogRef = this.dialog.open(PremiumModalComponent, {
-      data: { premium: this.premiumToPay },
-      // position: { top: '50%', left: '50%' },
-      // panelClass: 'custom-dialog-container',
+      data: { premium: this.premiumToPay }
     });
 
     dialogRef.afterOpened().subscribe(() => {
