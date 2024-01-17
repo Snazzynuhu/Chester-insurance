@@ -8,7 +8,7 @@ import { InsuranceFormComponent } from './insurance-form/insurance-form.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PremiumModalComponent } from './premium-modal/premium-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { OverlayModule } from '@angular/cdk/overlay';
+// import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    OverlayModule
+    // OverlayModule
   ],
   providers: [],
   bootstrap: [AppComponent]

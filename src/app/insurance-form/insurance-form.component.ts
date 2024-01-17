@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PremiumModalComponent } from '../premium-modal/premium-modal.component';
-import { OverlayContainer } from '@angular/cdk/overlay';
+// import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-insurance-form',
@@ -16,8 +16,7 @@ export class InsuranceFormComponent {
   premiumToPay!: number;
   isModalOpen: boolean = false;
 
-  constructor(public dialog: MatDialog,
-    private overlayContainer: OverlayContainer) {}
+  constructor(public dialog: MatDialog) {}
 
   calculatePremium(): void {
     this.premiumToPay = 0;
@@ -44,12 +43,13 @@ export class InsuranceFormComponent {
 
     const dialogRef = this.dialog.open(PremiumModalComponent, {
       data: { premium: this.premiumToPay },
-      position: { top: '50%', left: '50%' },
-      panelClass: 'custom-dialog-container',
+      // position: { top: '50%', left: '50%' },
+      // panelClass: 'custom-dialog-container',
     });
 
     dialogRef.afterOpened().subscribe(() => {
       this.isModalOpen = true;
+      console.log('The dialog was opended');
     });
 
     dialogRef.afterClosed().subscribe((result) => {
