@@ -15,6 +15,7 @@ export class InsuranceFormComponent {
   penaltyPoints!: number;
   premiumToPay!: number;
   isModalOpen: boolean = false;
+  currentYear: any = new Date().getFullYear();
 
   constructor(public dialog: MatDialog) {}
 
